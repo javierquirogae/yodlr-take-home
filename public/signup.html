@@ -6,12 +6,23 @@
 </head>
 <body>
   <h1>Yodlr Registration Portal</h1>
-  <form>
+  <form action="/users" method="POST">
     Email: <input type="email" name="email"></br>
-    <button type="submit">Submit</button>
+    First Name: <input type="text" name="firstName"></br>
+    Last Name: <input type="text" name="lastName"></br>
+    <input type="submit" value="Submit">
   </form>
   <p>
     <a href="/admin.html">Admin Page</a>
   </p>
+  <script>
+    // Optional: Redirect to the home page after form submission
+    document.querySelector('form').addEventListener('submit', function() {
+        //rederect to home page
+        window.location.href = '/';
+              
+
+    });
+</script>
 </body>
 </html>
